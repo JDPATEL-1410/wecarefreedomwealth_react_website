@@ -5,12 +5,9 @@ import {
     FaMoneyBillWave,
     FaChartLine,
     FaArrowRight,
-    FaLightbulb,
     FaRocket,
     FaShieldAlt,
     FaCalendarAlt,
-    FaBook,
-    FaGraduationCap,
     FaGem,
     FaCompass,
     FaLayerGroup

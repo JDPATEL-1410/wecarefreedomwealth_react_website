@@ -2,14 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   FaGraduationCap,
-  FaRupeeSign,
-  FaCalendarAlt,
-  FaPercentage,
   FaChartLine,
   FaTrophy,
-  FaInfoCircle,
   FaLightbulb,
-  FaChild,
   FaCalculator,
   FaArrowRight,
   FaCheckCircle

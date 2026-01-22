@@ -8,7 +8,6 @@ import {
     FaCalculator,
     FaChartLine,
     FaShieldAlt,
-    FaPiggyBank,
     FaUniversity,
     FaBookReader,
     FaGem,

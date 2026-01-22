@@ -7,7 +7,6 @@ import {
   FaPhone,
   FaEnvelope,
   FaMapMarkerAlt,
-  FaWhatsapp,
   FaLinkedin,
   FaInstagram,
   FaYoutube,
@@ -23,15 +22,7 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const quickLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Service', path: '/services' },
-    { name: 'Calculators', path: '/calculators' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Video', path: '/videos' },
-    { name: 'Contact Us', path: '/contact' }
-  ];
+
 
   // Office Locations from the image
   const offices = [
@@ -62,18 +53,7 @@ const Footer = () => {
 
   ];
 
-  const tools = [
-    'Financial Calculators',
-    'Buy MF Online',
-    'Pay Premium Online'
-  ];
 
-  const services = [
-    'Financial Planning',
-    'Tax Planning',
-    'Mutual Fund',
-    'NRI Corner'
-  ];
 
   const socialLinks = [
     { icon: FaFacebook, href: 'https://facebook.com/wecarefreedomwealth', color: 'hover:text-blue-400' },

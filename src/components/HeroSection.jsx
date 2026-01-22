@@ -100,7 +100,6 @@ const HeroSection = () => {
       style={{
         backgroundImage: 'linear-gradient(135deg, #ffe5bd 0%, #fffdf7 35%, #c7f1ff 100%)'
       }}
-      role="region"
       aria-label="Hero carousel"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}

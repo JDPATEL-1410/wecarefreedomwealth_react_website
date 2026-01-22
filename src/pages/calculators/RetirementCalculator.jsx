@@ -2,15 +2,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   FaUmbrella,
-  FaRupeeSign,
   FaUser,
-  FaPercentage,
   FaChartLine,
   FaTrophy,
-  FaInfoCircle,
   FaLightbulb,
   FaPiggyBank,
-  FaCalculator,
   FaArrowRight,
   FaCheckCircle
 } from 'react-icons/fa';
@@ -46,7 +42,7 @@ const RetirementCalculator = () => {
   const [retirementAge, setRetirementAge] = useState(60);
   const [monthlyExpense, setMonthlyExpense] = useState(50000);
   const [inflationRate, setInflationRate] = useState(6);
-  const [expectedReturn, setExpectedReturn] = useState(12);
+  const expectedReturn = 12;
   const [currentSavings, setCurrentSavings] = useState(500000);
   const [currency, setCurrency] = useState('INR');
 

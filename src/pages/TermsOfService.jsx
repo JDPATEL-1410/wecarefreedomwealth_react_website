@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaFileContract, FaGavel, FaHandshake, FaShieldAlt, FaArrowRight } from "react-icons/fa";
+import { FaGavel, FaHandshake, FaArrowRight } from "react-icons/fa";
 
 const TermsOfService = () => {
   return (

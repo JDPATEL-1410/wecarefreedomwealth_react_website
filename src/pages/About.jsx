@@ -2,33 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  FaRocket, FaEye, FaUsers, FaChartLine, FaTrophy,
-  FaShieldAlt, FaHandshake, FaBullseye, FaArrowRight,
-  FaLightbulb, FaHistory, FaGem
+  FaRocket, FaEye, FaHandshake, FaArrowRight,
+  FaHistory, FaGem
 } from 'react-icons/fa';
 
 import vasudev_thakker from '../assets/team/vasudev-thakker.jpg';
 import geetaben_thakker from '../assets/team/geetaben-thakker.jpg';
 import nikhil_thakkar from '../assets/team/nikhil-thakker.jpg';
 import megha_thakkar from '../assets/team/megha-thakker.jpg';
-import dharmesh_kunadia from '../assets/team/dharmesh-kunadia.jpg';
-import dhruvik_shah from '../assets/team/dhruvik-shah.jpg';
-import tushar_shah from '../assets/team/tushar-shah.jpg';
-import kamlesh_patel from '../assets/team/kamlesh-patel.jpg';
-import nishith_pandya from '../assets/team/nishith-pandya.png';
-import hetal_mehta from '../assets/team/hetal-mehta.jpg';
-import rajesh_chauhan from '../assets/team/rajesh-chauhan.jpg';
-import prakash_machhi from '../assets/team/prakash-machhi.jpg';
-import vaidehi_patel from '../assets/team/vaidehi-patel.jpg';
-import pritesh_thakor from '../assets/team/pritesh-thakor.jpg';
-import pravin_solanki from '../assets/team/pravin-solanki.jpg';
-import dhruvi_sheth from '../assets/team/dhruvi-sheth.jpg';
-import chintal_patel from '../assets/team/chintal-patel.jpg';
-import vijay_vaghela from '../assets/team/vijay-vaghela.jpg';
-import rahul_solanki from '../assets/team/rahul-solanki.jpg';
-import pratik_shah from '../assets/team/pratik-shah.jpg';
-import meenaben_gohel from '../assets/team/meenaben-gohel.jpg';
-
 import groupImage from '../assets/groupimage.png';
 
 const About = () => {
@@ -39,18 +20,7 @@ const About = () => {
     { name: "Megha Thakkar", role: "Director", img: megha_thakkar, exp: "12+ Years", bio: "Ensuring operational excellence and superior client experience." }
   ];
 
-  const headDept = [
-    { name: "Nishith Pandya", role: "Insurance Head", img: nishith_pandya },
-    { name: "Dharmesh Kunadia", role: "Associate Partner", img: dharmesh_kunadia },
-    { name: "Dhruvik Shah", role: "Associate Partner", img: dhruvik_shah },
-    { name: "Tushar Shah", role: "Associate Partner", img: tushar_shah },
-    { name: "Kamlesh Patel", role: "General Manager", img: kamlesh_patel },
-    { name: "Hetal Mehta", role: "Back Office Head", img: hetal_mehta },
-    { name: "Rajesh Chauhan", role: "Associate Partner", img: rajesh_chauhan },
-    { name: "Prakash Machhi", role: "Insurance Head", img: prakash_machhi },
-    { name: "Vaidehi Patel", role: "Operations Lead", img: vaidehi_patel },
-    { name: "Pritesh Thakor", role: "IT Head", img: pritesh_thakor }
-  ];
+
 
   return (
     <div className="bg-[#f8fafc] font-sans selection:bg-orange-100 selection:text-orange-600">

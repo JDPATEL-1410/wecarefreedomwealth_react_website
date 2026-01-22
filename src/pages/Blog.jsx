@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   FaBook, FaSearch, FaCalendarAlt, FaUser, FaArrowRight,
-  FaClock, FaLightbulb, FaGraduationCap, FaArrowUp, FaTimes, FaBars,
   FaTerminal
 } from 'react-icons/fa';
 
@@ -10,17 +9,16 @@ const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
   const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   const categories = ['All', 'Personal Finance', 'Investing', 'Tax', 'Wealth'];
 
-  const staticPosts = [
+  const staticPosts = React.useMemo(() => [
     { title: "Architecting Your Multi-Generational Wealth Legacy", description: "Discover the benefits of partnering with We Care Freedom Wealth for all your investment and financial planning needs.", categories: ["Investing"], author: "Financial Expert", pubDate: "2025-10-05", thumbnail: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80", link: "#" },
     { title: "Institutional Equity Allocation: A Modern Primer", description: "Everything beginners need to know about stock market investing and trading through your demat account.", categories: ["Investing"], author: "Market Analyst", pubDate: "2025-10-02", thumbnail: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80", link: "#" },
     { title: "Tactical Tax Strategizing for Ultra HNI Portfolios", description: "Learn how to save tax while building wealth through smart mutual fund investments via We Care platform.", categories: ["Tax"], author: "Tax Advisor", pubDate: "2025-09-28", thumbnail: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80", link: "#" },
     { title: "The Compounding Protocol: Analyzing SIP Efficiency", description: "Discover how SIPs can help you build substantial wealth over time with disciplined investing.", categories: ["Wealth"], author: "Wealth Advisor", pubDate: "2025-09-25", thumbnail: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80", link: "#" },
     { title: "Sovereign Independence: The 2025 Wealth Roadmap", description: "Essential tips for budgeting, saving, and managing your personal finances effectively.", categories: ["Personal Finance"], author: "Finance Coach", pubDate: "2025-09-20", thumbnail: "https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=800&q=80", link: "#" }
-  ];
+  ], []);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -40,11 +38,11 @@ const Blog = () => {
       } catch (error) {
         setPosts(staticPosts);
       } finally {
-        setLoading(false);
+        // loading state removed if not used
       }
     };
     fetchPosts();
-  }, []);
+  }, [staticPosts]);
 
   const filteredPosts = posts.filter(post => {
     const matchesCategory = selectedCategory === 'All' || post.categories.includes(selectedCategory);

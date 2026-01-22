@@ -153,7 +153,7 @@ export const PageLoader = () => {
     );
 };
 
-export default {
+const skeletons = {
     CardSkeleton,
     ListSkeleton,
     TableSkeleton,
@@ -162,3 +162,5 @@ export default {
     Spinner,
     PageLoader
 };
+
+export default skeletons;

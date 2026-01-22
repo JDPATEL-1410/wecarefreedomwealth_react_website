@@ -2,12 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   FaPiggyBank,
-  FaRupeeSign,
-  FaCalendarAlt,
-  FaPercentage,
   FaChartLine,
   FaTrophy,
-  FaInfoCircle,
   FaLightbulb,
   FaMoneyBillWave,
   FaCalculator,

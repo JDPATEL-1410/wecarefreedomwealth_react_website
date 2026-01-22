@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   FaPlane,
-  FaRupeeSign,
-  FaCalendarAlt,
   FaPercentage,
   FaChartLine,
   FaTrophy,
-  FaInfoCircle,
   FaLightbulb,
   FaGlobeAmericas,
   FaArrowRight,

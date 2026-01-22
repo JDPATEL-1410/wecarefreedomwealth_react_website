@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  FaFileInvoiceDollar,
-  FaRupeeSign,
-  FaPercentage,
-  FaChartLine,
-  FaTrophy,
   FaInfoCircle,
   FaLightbulb,
   FaCalculator,
   FaArrowRight,
-  FaCheckCircle,
   FaBalanceScale,
-  FaShieldAlt
+  FaShieldAlt,
+  FaTrophy,
+  FaCheckCircle
 } from 'react-icons/fa';
 import { Doughnut } from 'react-chartjs-2';
 import SliderInput from '../../components/SliderInput';
@@ -24,7 +20,7 @@ const TaxCalculator = () => {
   const [annualIncome, setAnnualIncome] = useState(1200000);
   const [deductions, setDeductions] = useState(150000);
   const [regime, setRegime] = useState('old');
-  const [currency, setCurrency] = useState('INR');
+  const [currency] = useState('INR');
 
   const currencySymbols = { INR: '₹', USD: '$', EUR: '€' };
 
@@ -268,7 +264,7 @@ const ResultCard = ({ icon: Icon, label, value, subtext, color, featured }) => (
 const BenefitItem = ({ text }) => (
   <div className="flex items-center space-x-3">
     <FaCheckCircle className="text-orange-500 text-sm" />
-    <span className="text-xs font-black uppercase tracking-widest text-slate-300">{text}</span>
+    <span className="text-xs font-black uppercase tracking-widest text-slate-300\">{text}</span>
   </div>
 );
 

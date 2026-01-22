@@ -2,17 +2,13 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   FaChartLine,
-  FaRupeeSign,
-  FaCalendarAlt,
-  FaPercentage,
-  FaPiggyBank,
   FaTrophy,
-  FaInfoCircle,
   FaLightbulb,
   FaCalculator,
   FaArrowRight,
   FaCheckCircle,
-  FaCoins
+  FaCoins,
+  FaPiggyBank
 } from 'react-icons/fa';
 import { Line, Doughnut } from 'react-chartjs-2';
 import SliderInput from '../../components/SliderInput';

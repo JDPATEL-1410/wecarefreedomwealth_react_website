@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaChartBar, FaInfoCircle, FaArrowRight, FaTable, FaCalculator } from "react-icons/fa";
+import { FaChartBar, FaInfoCircle, FaArrowRight, FaTable } from "react-icons/fa";
 
 const CommissionDisclosure = () => {
   const commissions = [

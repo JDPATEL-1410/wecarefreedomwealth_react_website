@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   FaCar,
-  FaRupeeSign,
-  FaCalendarAlt,
   FaPercentage,
   FaChartLine,
   FaTrophy,

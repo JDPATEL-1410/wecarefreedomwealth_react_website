@@ -1,13 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  FaChartLine,
-  FaRupeeSign,
-  FaCalendarAlt,
-  FaPercentage,
-  FaPiggyBank,
-  FaTrophy,
-  FaInfoCircle,
   FaLightbulb,
   FaCalculator,
   FaArrowRight,

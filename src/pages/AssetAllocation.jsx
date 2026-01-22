@@ -8,7 +8,6 @@ import {
     FaCoins,
     FaChartLine,
     FaHome,
-    FaCheckCircle,
     FaArrowRight,
     FaLightbulb,
     FaAward,

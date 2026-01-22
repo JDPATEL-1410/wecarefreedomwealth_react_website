@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaExclamationTriangle, FaShieldAlt, FaCalculator, FaLink } from "react-icons/fa";
+import { FaExclamationTriangle, FaShieldAlt, FaLink } from "react-icons/fa";
 
 const Disclaimer = () => {
   const disclaimerSections = [

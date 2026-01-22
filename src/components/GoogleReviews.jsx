@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaStar, FaChevronLeft, FaChevronRight, FaQuoteLeft, FaCheckCircle, FaExternalLinkAlt } from 'react-icons/fa';
 
@@ -84,6 +84,11 @@ const GoogleReviews = () => {
         }
     ];
 
+    const handleNext = useCallback(() => {
+        setDirection(1);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+    }, [reviews.length]);
+
     // Auto-rotate carousel with pause functionality
     useEffect(() => {
         if (!isPaused) {
@@ -93,12 +98,7 @@ const GoogleReviews = () => {
 
             return () => clearInterval(timer);
         }
-    }, [currentIndex, isPaused]);
-
-    const handleNext = () => {
-        setDirection(1);
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
-    };
+    }, [handleNext, isPaused]);
 
     const handlePrev = () => {
         setDirection(-1);

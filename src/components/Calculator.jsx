@@ -1,7 +1,6 @@
 // src/components/Calculator.jsx
 
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 // ✅ Correct path - components se pages tak jana padega
@@ -40,7 +39,6 @@ const calculators = {
 
 const Calculator = () => {
   const [selected, setSelected] = useState("sip");
-  const navigate = useNavigate();
 
   return (
     <div className="pt-16 min-h-screen bg-white">
@@ -153,8 +151,8 @@ const Calculator = () => {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setSelected(key)}
                 className={`p-3 sm:p-4 rounded-lg sm:rounded-xl border-2 transition-all duration-300 ${selected === key
-                    ? 'bg-orange-500 border-orange-500 text-white shadow-lg'
-                    : 'bg-white border-gray-200 text-gray-700 hover:border-orange-300 hover:shadow-md'
+                  ? 'bg-orange-500 border-orange-500 text-white shadow-lg'
+                  : 'bg-white border-gray-200 text-gray-700 hover:border-orange-300 hover:shadow-md'
                   }`}
               >
                 <Icon className={`text-xl sm:text-2xl mx-auto mb-1.5 sm:mb-2 ${selected === key ? 'text-white' : 'text-orange-500'}`} />

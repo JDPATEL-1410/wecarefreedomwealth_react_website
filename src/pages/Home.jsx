@@ -6,19 +6,15 @@ import GoogleReviews from '../components/GoogleReviews';
 import {
   FaChartLine,
   FaShieldAlt,
-  FaUsers,
   FaArrowRight,
   FaHome,
   FaGraduationCap,
   FaRing,
   FaUmbrella,
   FaChartPie,
-  FaMoneyBillWave,
   FaBullseye,
   FaUniversity,
   FaFileInvoiceDollar,
-  FaCheckCircle,
-  FaStar,
   FaPlay,
   FaYoutube,
   FaClock,
@@ -64,7 +60,6 @@ const Home = () => {
 
   // YouTube API Configuration
   const YOUTUBE_API_KEY = "AIzaSyC2Ipc357Zm_TffHwDw5p_YBClyMYgT3vc";
-  const CHANNEL_ID = "UCADuni6S-18E2haTHUwkunA";
   const PLAYLIST_ID = "UUADuni6S-18E2haTHUwkunA";
 
   // Utility to format YouTube date
@@ -317,12 +312,7 @@ const Home = () => {
     }
   ], []);
 
-  const stats = [
-    { number: "35+", label: "Years of Excellence", icon: FaStar },
-    { number: "10,000+", label: "Happy Clients", icon: FaUsers },
-    { number: "₹500Cr+", label: "Assets Under Advisory", icon: FaMoneyBillWave },
-    { number: "99%", label: "Client Satisfaction", icon: FaCheckCircle }
-  ];
+
 
   return (
     <div className="overflow-hidden bg-white">

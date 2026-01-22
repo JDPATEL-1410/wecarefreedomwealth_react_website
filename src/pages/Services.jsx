@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  FaChartPie, FaChartLine, FaUmbrella, FaCheckCircle, FaBullseye,
-  FaHeartbeat, FaGem, FaUniversity, FaGlobe, FaCoins,
-  FaFileInvoiceDollar, FaLandmark, FaChevronRight, FaUsers,
-  FaAward, FaBars, FaTimes, FaShieldAlt, FaArrowRight, FaCogs
+  FaChartPie, FaChartLine, FaUmbrella, FaBullseye,
+  FaGem, FaLandmark, FaChevronRight,
+  FaAward, FaShieldAlt, FaArrowRight, FaCogs,
+  FaFileInvoiceDollar
 } from 'react-icons/fa';
 
 import goalBasedImg from '../assets/images/services/goal-based-investing.png';
@@ -17,7 +17,6 @@ import lifeInsuranceImg from '../assets/images/services/life-insurance.png';
 
 const Services = () => {
   const [activeService, setActiveService] = useState(0);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const services = [
     {
@@ -79,7 +78,6 @@ const Services = () => {
   const handleServiceSelect = (index) => {
     setActiveService(index);
     window.scrollTo({ top: 400, behavior: 'smooth' });
-    setMobileMenuOpen(false);
   };
 
   return (

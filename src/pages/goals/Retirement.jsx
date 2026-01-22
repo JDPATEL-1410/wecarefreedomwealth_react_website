@@ -9,7 +9,6 @@ import {
     FaChartLine,
     FaShieldAlt,
     FaPiggyBank,
-    FaGem,
     FaUserShield,
     FaHistory,
     FaHandHoldingHeart

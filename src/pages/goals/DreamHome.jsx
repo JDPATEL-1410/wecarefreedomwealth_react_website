@@ -8,7 +8,6 @@ import {
     FaCalculator,
     FaChartLine,
     FaShieldAlt,
-    FaPiggyBank,
     FaGem,
     FaLandmark
 } from 'react-icons/fa';

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FaFileAlt, FaSpinner, FaLock, FaShieldAlt, FaCalculator } from "react-icons/fa";
+import { FaFileAlt, FaSpinner, FaLock, FaShieldAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const CodeOfConduct = () => {

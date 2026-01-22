@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   FaCalculator, FaChartLine, FaPiggyBank, FaGraduationCap, FaRing,
   FaUmbrella, FaHome, FaCar, FaPlane, FaExchangeAlt,
-  FaFileInvoiceDollar, FaClock, FaSearch, FaStar, FaCheckCircle,
+  FaFileInvoiceDollar, FaClock, FaSearch, FaStar,
   FaShieldAlt, FaArrowRight, FaToolbox
 } from 'react-icons/fa';
 

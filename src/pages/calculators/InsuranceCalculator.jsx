@@ -2,18 +2,13 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   FaShieldAlt,
-  FaRupeeSign,
-  FaCalendarAlt,
-  FaPercentage,
-  FaChartLine,
-  FaTrophy,
-  FaInfoCircle,
-  FaLightbulb,
   FaHeartbeat,
   FaArrowRight,
   FaCheckCircle,
   FaUmbrella,
-  FaCalculator
+  FaCalculator,
+  FaLightbulb,
+  FaInfoCircle
 } from 'react-icons/fa';
 import { Doughnut, Bar } from 'react-chartjs-2';
 import SliderInput from '../../components/SliderInput';
@@ -37,8 +32,8 @@ const InsuranceCalculator = () => {
   const [annualIncome, setAnnualIncome] = useState(1200000);
   const [annualExpenses, setAnnualExpenses] = useState(400000); // Personal expenses to deduct
   const [yearsToRetire, setYearsToRetire] = useState(25);
-  const [inflationRate, setInflationRate] = useState(6);
-  const [expectedReturn, setExpectedReturn] = useState(8);
+  const inflationRate = 6;
+  const expectedReturn = 8;
   const [existingCover, setExistingCover] = useState(2000000);
   const [currency, setCurrency] = useState('INR');
 

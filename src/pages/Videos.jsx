@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaPlay, FaYoutube, FaSearch, FaClock, FaEye, FaVideo, FaArrowRight, FaTv, FaInfoCircle } from 'react-icons/fa';
+import { FaPlay, FaYoutube, FaSearch, FaClock, FaEye, FaVideo, FaArrowRight, FaTv } from 'react-icons/fa';
 import axios from 'axios';
 import { CardSkeleton } from '../components/LoadingSkeletons';
 
@@ -9,11 +9,9 @@ const Videos = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   // YouTube API Configuration - Updated with your credentials
   const YOUTUBE_API_KEY = "AIzaSyC2Ipc357Zm_TffHwDw5p_YBClyMYgT3vc";
-  const CHANNEL_ID = "UCADuni6S-18E2haTHUwkunA";
   const PLAYLIST_ID = "UUADuni6S-18E2haTHUwkunA"; // Channel uploads playlist ID
 
   const categories = ['All', 'Latest Upload', 'SIP & Mutual Funds', 'Tax Planning', 'Insurance', 'Retirement Planning', 'Market Analysis'];
@@ -36,7 +34,7 @@ const Videos = () => {
     return Math.floor(seconds) + "s ago";
   };
 
-  const staticVideos = [
+  const staticVideos = React.useMemo(() => [
     {
       id: 1,
       title: "Organize Your Money - Live the lifestyle you want | Nikhil Thakkar",
@@ -97,7 +95,7 @@ const Videos = () => {
       views: "5.4K",
       uploadDate: "1 month ago"
     }
-  ];
+  ], []);
 
   // Function to fetch video details including duration
   const fetchVideoDetails = async (videoIds) => {
@@ -221,34 +219,16 @@ const Videos = () => {
 
         setVideos(uniqueVideos);
         setLoading(false);
-        setError(null);
 
       } catch (err) {
         console.error("Error fetching YouTube videos:", err);
-
-        // Provide specific error messages
-        if (err.response) {
-          switch (err.response.status) {
-            case 403:
-              setError("YouTube API quota exceeded. Showing featured videos instead.");
-              break;
-            case 404:
-              setError("Playlist not found. Showing featured videos instead.");
-              break;
-            default:
-              setError("Could not fetch videos. Showing featured videos instead.");
-          }
-        } else {
-          setError("Network error. Showing featured videos instead.");
-        }
-
         setVideos(staticVideos);
         setLoading(false);
       }
     };
 
     fetchVideos();
-  }, []);
+  }, [staticVideos]);
 
   const filteredVideos = videos.filter(video => {
     const matchesSearch = video.title.toLowerCase().includes(searchTerm.toLowerCase());

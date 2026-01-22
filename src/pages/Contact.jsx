@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import {
-  FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaClock,
+  FaWhatsapp,
   FaLinkedin, FaInstagram, FaYoutube, FaPaperPlane, FaFacebook,
   FaHeadset, FaGlobe, FaShieldAlt, FaArrowRight, FaHeadphones
 } from 'react-icons/fa';
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const officeLocations = [
     {
@@ -54,7 +53,6 @@ const Contact = () => {
 
     setTimeout(() => {
       setIsSubmitting(false);
-      setIsSubmitted(true);
       reset();
     }, 1000);
   };
@@ -270,7 +268,7 @@ const Contact = () => {
                     <h5 className="font-black text-slate-900 text-lg">Global Presence</h5>
                     <div className="flex space-x-4 mt-4">
                       {[FaLinkedin, FaFacebook, FaInstagram, FaYoutube].map((Icon, i) => (
-                        <a key={i} href="#" className="w-11 h-11 bg-slate-50 border border-slate-100 rounded-xl flex items-center justify-center text-slate-400 hover:text-orange-600 hover:bg-white hover:shadow-lg transition-all">
+                        <a key={i} href="#!" className="w-11 h-11 bg-slate-50 border border-slate-100 rounded-xl flex items-center justify-center text-slate-400 hover:text-orange-600 hover:bg-white hover:shadow-lg transition-all">
                           <Icon />
                         </a>
                       ))}
